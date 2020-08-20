@@ -1,0 +1,42 @@
+{
+  "configurations" : [
+    {
+      "id" : "D88F327E-911E-452F-9FC1-41F42D85DC9A",
+      "name" : "XCMetrics",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "mainThreadCheckerEnabled" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:XCMetrics.xcodeproj",
+      "identifier" : "B5E7E85A24EE67BA00024239",
+      "name" : "XCMetrics"
+    },
+    "testExecutionOrdering" : "random",
+    "uiTestingScreenshotsLifetime" : "keepNever",
+    "userAttachmentLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:XCMetrics.xcodeproj",
+        "identifier" : "B5E7E87224EE67BB00024239",
+        "name" : "XCMetricsTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:XCMetrics.xcodeproj",
+        "identifier" : "B5E7E87D24EE67BC00024239",
+        "name" : "XCMetricsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

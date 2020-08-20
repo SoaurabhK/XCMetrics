@@ -56,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B55B5F4824EE88D90020182F /* XCMetrics.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = XCMetrics.xctestplan; path = XCMetrics.xcodeproj/XCMetrics.xctestplan; sourceTree = "<group>"; };
+		B55B5F4824EE88D90020182F /* XCMetrics.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCMetrics.xctestplan; sourceTree = "<group>"; };
 		B5E7E85B24EE67BA00024239 /* XCMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E7E85E24EE67BA00024239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E7E86024EE67BA00024239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,13 +116,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B5E7E85224EE67BA00024239 = {
+		B55B5F4A24EE986E0020182F /* XCMetricsTestPlan */ = {
 			isa = PBXGroup;
 			children = (
 				B55B5F4824EE88D90020182F /* XCMetrics.xctestplan */,
+			);
+			path = XCMetricsTestPlan;
+			sourceTree = "<group>";
+		};
+		B5E7E85224EE67BA00024239 = {
+			isa = PBXGroup;
+			children = (
 				B5E7E85D24EE67BA00024239 /* XCMetrics */,
 				B5E7E87624EE67BC00024239 /* XCMetricsTests */,
 				B5E7E88124EE67BC00024239 /* XCMetricsUITests */,
+				B55B5F4A24EE986E0020182F /* XCMetricsTestPlan */,
 				B5E7E85C24EE67BA00024239 /* Products */,
 			);
 			sourceTree = "<group>";

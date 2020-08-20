@@ -27,7 +27,7 @@
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <TestPlanReference
-               reference = "container:XCMetrics.xcodeproj/XCMetrics.xctestplan">
+               reference = "container:XCMetricsTestPlan/XCMetrics.xctestplan">
             </TestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -39,7 +39,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:XCMetrics.xcodeproj/XCMetrics.xctestplan"
+            reference = "container:XCMetricsTestPlan/XCMetrics.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

@@ -4,7 +4,7 @@
       "id" : "D88F327E-911E-452F-9FC1-41F42D85DC9A",
       "name" : "XCMetrics",
       "options" : {
-
+        "uiTestingScreenshotsLifetime" : "deleteOnSuccess"
       }
     }
   ],

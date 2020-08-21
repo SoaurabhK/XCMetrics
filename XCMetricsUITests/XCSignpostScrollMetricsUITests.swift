@@ -4,11 +4,9 @@
 //
 //  Created by Soaurabh Kakkar on 20/08/20.
 //
-// NOTE: https://stackoverflow.com/questions/59645536/available-attribute-does-not-work-with-xctest-classes-or-methods
 
 import XCTest
 
-@available(iOS 14.0, *)
 final class XCSignpostScrollMetricsUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -25,10 +23,17 @@ final class XCSignpostScrollMetricsUITests: XCTestCase {
         
         let signpostMetric = self.signpostMetric(for: SignpostName.scrollDecelerationSignpost)
         
-        measure(metrics: [signpostMetric, XCTOSSignpostMetric.scrollDecelerationMetric]) {
-            emojiTableView.swipeUp(velocity: .fast)
-            stopMeasuring()
+        let metrics: [XCTMetric]
+        if #available(iOS 14, *) {
+            metrics = [signpostMetric, OSSignpostMetric.scrollDecelerationMetric]
+        } else {
+            metrics = [signpostMetric]
+        }
+        
+        measure(metrics: metrics) {
             emojiTableView.swipeDown(velocity: .fast)
+            startMeasuring()
+            emojiTableView.swipeUp(velocity: .fast)
         }
     }
     
@@ -41,20 +46,27 @@ final class XCSignpostScrollMetricsUITests: XCTestCase {
         
         let signpostMetric = self.signpostMetric(for: SignpostName.scrollDraggingSignpost)
         
-        measure(metrics: [signpostMetric, XCTOSSignpostMetric.scrollDraggingMetric]) {
-            emojiTableView.swipeUp(velocity: .fast)
-            stopMeasuring()
+        let metrics: [XCTMetric]
+        if #available(iOS 14, *) {
+            metrics = [signpostMetric, OSSignpostMetric.scrollDraggingMetric]
+        } else {
+            metrics = [signpostMetric]
+        }
+        
+        measure(metrics: metrics) {
             emojiTableView.swipeDown(velocity: .fast)
+            startMeasuring()
+            emojiTableView.swipeUp(velocity: .fast)
         }
     }
     
     override class var defaultMeasureOptions: XCTMeasureOptions {
         let measureOptions = XCTMeasureOptions()
-        measureOptions.invocationOptions = [.manuallyStop]
+        measureOptions.invocationOptions = [.manuallyStart]
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
-        return XCTOSSignpostMetric(subsystem: scrollLog.subsystem, category: scrollLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
+        return OSSignpostMetric(subsystem: scrollLog.subsystem, category: scrollLog.category, name: String(name))
     }
 }

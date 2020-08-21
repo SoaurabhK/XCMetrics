@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B56D640F24EFCE2D005437D5 /* OSSignpostMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */; };
+		B56D641024EFD403005437D5 /* OSSignpostMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */; };
 		B5E7E85F24EE67BA00024239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E85E24EE67BA00024239 /* AppDelegate.swift */; };
 		B5E7E86124EE67BA00024239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E86024EE67BA00024239 /* SceneDelegate.swift */; };
 		B5E7E86624EE67BA00024239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E7E86424EE67BA00024239 /* Main.storyboard */; };
@@ -376,6 +377,7 @@
 				B5E7E91F24EE79CB00024239 /* XCSignpostTransitionMetricsUITests.swift in Sources */,
 				B5E7E91A24EE78F800024239 /* Log.swift in Sources */,
 				B5E7E91B24EE78FB00024239 /* String+Init.swift in Sources */,
+				B56D641024EFD403005437D5 /* OSSignpostMetric.swift in Sources */,
 				B5E7E91824EE770500024239 /* XCAppLaunchMetricsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

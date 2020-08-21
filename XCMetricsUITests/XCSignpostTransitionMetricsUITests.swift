@@ -4,11 +4,9 @@
 //
 //  Created by Soaurabh Kakkar on 20/08/20.
 //
-// NOTE: https://stackoverflow.com/questions/59645536/available-attribute-does-not-work-with-xctest-classes-or-methods
 
 import XCTest
 
-@available(iOS 14.0, *)
 final class XCSignpostTransitionMetricsUITests: XCTestCase {
     
     override func setUpWithError() throws {
@@ -23,20 +21,28 @@ final class XCSignpostTransitionMetricsUITests: XCTestCase {
         
         let signpostMetric = self.signpostMetric(for: SignpostName.scrollViewNavTransition)
         
-        measure(metrics: [signpostMetric, XCTOSSignpostMetric.navigationTransitionMetric]) {
+        let metrics: [XCTMetric]
+        if #available(iOS 14, *) {
+            metrics = [signpostMetric, OSSignpostMetric.navigationTransitionMetric]
+        } else {
+            metrics = [signpostMetric]
+        }
+        
+        measure(metrics: metrics) {
+            let backButton = app.navigationBars.buttons["Back"]
+            if backButton.exists { backButton.tap() }
+            startMeasuring()
             scrollPerfCell.tap()
-            stopMeasuring()
-            app.navigationBars.buttons["Back"].tap()
         }
     }
     
     override class var defaultMeasureOptions: XCTMeasureOptions {
         let measureOptions = XCTMeasureOptions()
-        measureOptions.invocationOptions = [.manuallyStop]
+        measureOptions.invocationOptions = [.manuallyStart]
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
-        return XCTOSSignpostMetric(subsystem: navTransitionLog.subsystem, category: navTransitionLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
+        return OSSignpostMetric(subsystem: navTransitionLog.subsystem, category: navTransitionLog.category, name: String(name))
     }
 }

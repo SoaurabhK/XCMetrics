@@ -50,8 +50,8 @@ final class XCSignpostMetricsTests: XCTestCase {
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
-        return XCTOSSignpostMetric(subsystem: permutationLog.subsystem, category: permutationLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
+        return OSSignpostMetric(subsystem: permutationLog.subsystem, category: permutationLog.category, name: String(name))
     }
 }
 

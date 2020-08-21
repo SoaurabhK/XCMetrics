@@ -29,13 +29,20 @@ final class XCMetricsTests: XCTestCase {
     
     func testPerformanceConcurrent() {
         let measureOptions = XCTMeasureOptions()
-        measureOptions.invocationOptions = [.manuallyStart, .manuallyStop]
+        if #available(iOS 14, *) {
+            measureOptions.invocationOptions = [.manuallyStart, .manuallyStop]
+        } else {
+            // NOTE: .manuallyStop doesn't work on iOS 13 with some metrics
+            measureOptions.invocationOptions = [.manuallyStart]
+        }
         measureOptions.iterationCount = 10
         
         self.measure(metrics: Self.defaultMetrics, options: measureOptions) {
             startMeasuring()
             _ = source.permutationsConcurrent(concurrentThreads: 4)
-            stopMeasuring()
+            if #available(iOS 14, *) {
+                stopMeasuring()
+            }
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56D640F24EFCE2D005437D5 /* OSSignpostMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */; };
 		B5E7E85F24EE67BA00024239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E85E24EE67BA00024239 /* AppDelegate.swift */; };
 		B5E7E86124EE67BA00024239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E86024EE67BA00024239 /* SceneDelegate.swift */; };
 		B5E7E86624EE67BA00024239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E7E86424EE67BA00024239 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		B55B5F4824EE88D90020182F /* XCMetrics.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCMetrics.xctestplan; sourceTree = "<group>"; };
+		B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSignpostMetric.swift; sourceTree = "<group>"; };
 		B5E7E85B24EE67BA00024239 /* XCMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E7E85E24EE67BA00024239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E7E86024EE67BA00024239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B5E7E87724EE67BC00024239 /* XCMetricsTests.swift */,
 				B5E7E90F24EE74D100024239 /* XCSignpostMetricsTests.swift */,
 				B5E7E91524EE761E00024239 /* XCAsyncPerformanceTests.swift */,
+				B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */,
 				B5E7E91124EE755200024239 /* MonotonicClockMetric.swift */,
 				B5E7E87924EE67BC00024239 /* Info.plist */,
 			);
@@ -358,6 +361,7 @@
 				B5E7E90C24EE736000024239 /* XCPerformanceMetricsTests.swift in Sources */,
 				B5E7E90E24EE73B200024239 /* XCTPerformanceMetric+All.swift in Sources */,
 				B5E7E91424EE758700024239 /* AtomicArray.swift in Sources */,
+				B56D640F24EFCE2D005437D5 /* OSSignpostMetric.swift in Sources */,
 				B5E7E91024EE74D100024239 /* XCSignpostMetricsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

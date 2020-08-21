@@ -17,10 +17,12 @@ final class XCAsyncPerformanceTests: XCTestCase {
             let exp = expectation(description: "asyncTask")
             self.startMeasuring()
             asyncTask(withDuration: 0.1) {
-                self.stopMeasuring()
+                if #available(iOS 14, *) {
+                    self.stopMeasuring()
+                }
                 exp.fulfill()
             }
-            wait(for: [exp], timeout: 0.2)
+            wait(for: [exp], timeout: 0.5)
         }
     }
     
@@ -41,11 +43,16 @@ final class XCAsyncPerformanceTests: XCTestCase {
     override class var defaultMeasureOptions: XCTMeasureOptions {
         let measureOptions = XCTMeasureOptions()
         measureOptions.iterationCount = 10
-        measureOptions.invocationOptions = [.manuallyStart, .manuallyStop]
+        if #available(iOS 14, *) {
+            measureOptions.invocationOptions = [.manuallyStart, .manuallyStop]
+        } else {
+            // NOTE: .manuallyStop doesn't work on iOS 13 with some metrics
+            measureOptions.invocationOptions = [.manuallyStart]
+        }
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
-        return XCTOSSignpostMetric(subsystem: asyncTaskLog.subsystem, category: asyncTaskLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
+        return OSSignpostMetric(subsystem: asyncTaskLog.subsystem, category: asyncTaskLog.category, name: String(name))
     }
 }

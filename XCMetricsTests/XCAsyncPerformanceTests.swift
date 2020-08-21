@@ -34,7 +34,7 @@ final class XCAsyncPerformanceTests: XCTestCase {
                 self.stopMeasuring()
                 exp.fulfill()
             }
-            wait(for: [exp], timeout: 0.2)
+            wait(for: [exp], timeout: 0.5)
         }
     }
     

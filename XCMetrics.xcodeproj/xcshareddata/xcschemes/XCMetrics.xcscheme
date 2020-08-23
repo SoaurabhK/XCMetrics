@@ -43,28 +43,6 @@
             default = "YES">
          </TestPlanReference>
       </TestPlans>
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5E7E87224EE67BB00024239"
-               BuildableName = "XCMetricsTests.xctest"
-               BlueprintName = "XCMetricsTests"
-               ReferencedContainer = "container:XCMetrics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5E7E87D24EE67BC00024239"
-               BuildableName = "XCMetricsUITests.xctest"
-               BlueprintName = "XCMetricsUITests"
-               ReferencedContainer = "container:XCMetrics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Release"

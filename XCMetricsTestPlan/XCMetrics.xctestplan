@@ -22,7 +22,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:XCMetrics.xcodeproj",
         "identifier" : "B5E7E87224EE67BB00024239",
@@ -30,7 +29,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:XCMetrics.xcodeproj",
         "identifier" : "B5E7E87D24EE67BC00024239",

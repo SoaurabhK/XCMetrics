@@ -16,8 +16,10 @@ final class XCAppLaunchMetricsUITests: XCTestCase {
     
     func testLaunchPerformance() throws {
         // This measures how long it takes to launch your application.
+        let app = XCUIApplication()
+        
         measure(metrics: [XCTApplicationLaunchMetric()]) {
-            XCUIApplication().launch()
+            app.launch()
         }
     }
     
@@ -26,8 +28,9 @@ final class XCAppLaunchMetricsUITests: XCTestCase {
     func testLaunchPerfUntilResponsive() throws {
         // This measures how long it takes to launch your application.
         guard #available(iOS 14, *) else { return }
+        let app = XCUIApplication()
+        
         measure(metrics: [XCTApplicationLaunchMetric(waitUntilResponsive: true)]) {
-            let app = XCUIApplication()
             app.launch()
             app.activate()
         }

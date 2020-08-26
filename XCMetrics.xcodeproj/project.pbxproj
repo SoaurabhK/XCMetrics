@@ -144,13 +144,6 @@
 			path = XCMetricsTestPlan;
 			sourceTree = "<group>";
 		};
-		B593475424F50D4D0018E1A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B5E7E85224EE67BA00024239 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +152,6 @@
 				B5E7E88124EE67BC00024239 /* XCMetricsUITests */,
 				B55B5F4A24EE986E0020182F /* XCMetricsTestPlan */,
 				B5E7E85C24EE67BA00024239 /* Products */,
-				B593475424F50D4D0018E1A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

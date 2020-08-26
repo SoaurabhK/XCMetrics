@@ -6,8 +6,9 @@
 //
 
 import XCTest
+import InterposeKit
 
-final class XCAppLaunchMetricsUITests: XCTestCase {
+final class XCAppLaunchMetricsUITests: XCAppLaunchHookedTestCase {
 
     override func setUpWithError() throws {
         // In UI tests it is usually best to stop immediately when a failure occurs.

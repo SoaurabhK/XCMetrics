@@ -3,12 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B56D640F24EFCE2D005437D5 /* OSSignpostMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */; };
-		B56D641024EFD403005437D5 /* OSSignpostMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */; };
+		B56D640F24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift */; };
+		B56D641024EFD403005437D5 /* XCTOSSignpostMetric+Hooked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D640E24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift */; };
+		B593475324F5098F0018E1A3 /* InterposeKit in Frameworks */ = {isa = PBXBuildFile; productRef = B593475224F5098F0018E1A3 /* InterposeKit */; };
+		B593475624F50D4D0018E1A3 /* InterposeKit in Frameworks */ = {isa = PBXBuildFile; productRef = B593475524F50D4D0018E1A3 /* InterposeKit */; };
+		B593475824F5683E0018E1A3 /* XCTApplicationLaunchMetric+Hooked.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475724F5683E0018E1A3 /* XCTApplicationLaunchMetric+Hooked.swift */; };
+		B593475A24F56A5C0018E1A3 /* XCSignpostHookTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475924F56A5C0018E1A3 /* XCSignpostHookTestCase.swift */; };
+		B593475B24F56A5C0018E1A3 /* XCSignpostHookTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475924F56A5C0018E1A3 /* XCSignpostHookTestCase.swift */; };
+		B593475D24F56AD60018E1A3 /* Signpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475C24F56AD60018E1A3 /* Signpost.swift */; };
+		B593475E24F56AD60018E1A3 /* Signpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475C24F56AD60018E1A3 /* Signpost.swift */; };
+		B593476024F56AFF0018E1A3 /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475F24F56AFF0018E1A3 /* Measurements.swift */; };
+		B593476124F56AFF0018E1A3 /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593475F24F56AFF0018E1A3 /* Measurements.swift */; };
+		B593476324F56BC80018E1A3 /* XCAppLaunchHookedTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593476224F56BC80018E1A3 /* XCAppLaunchHookedTestCase.swift */; };
 		B5E7E85F24EE67BA00024239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E85E24EE67BA00024239 /* AppDelegate.swift */; };
 		B5E7E86124EE67BA00024239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7E86024EE67BA00024239 /* SceneDelegate.swift */; };
 		B5E7E86624EE67BA00024239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E7E86424EE67BA00024239 /* Main.storyboard */; };
@@ -59,7 +69,12 @@
 
 /* Begin PBXFileReference section */
 		B55B5F4824EE88D90020182F /* XCMetrics.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = XCMetrics.xctestplan; sourceTree = "<group>"; };
-		B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSignpostMetric.swift; sourceTree = "<group>"; };
+		B56D640E24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTOSSignpostMetric+Hooked.swift"; sourceTree = "<group>"; };
+		B593475724F5683E0018E1A3 /* XCTApplicationLaunchMetric+Hooked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTApplicationLaunchMetric+Hooked.swift"; sourceTree = "<group>"; };
+		B593475924F56A5C0018E1A3 /* XCSignpostHookTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSignpostHookTestCase.swift; sourceTree = "<group>"; };
+		B593475C24F56AD60018E1A3 /* Signpost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signpost.swift; sourceTree = "<group>"; };
+		B593475F24F56AFF0018E1A3 /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
+		B593476224F56BC80018E1A3 /* XCAppLaunchHookedTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAppLaunchHookedTestCase.swift; sourceTree = "<group>"; };
 		B5E7E85B24EE67BA00024239 /* XCMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E7E85E24EE67BA00024239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E7E86024EE67BA00024239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593475624F50D4D0018E1A3 /* InterposeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593475324F5098F0018E1A3 /* InterposeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +144,13 @@
 			path = XCMetricsTestPlan;
 			sourceTree = "<group>";
 		};
+		B593475424F50D4D0018E1A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5E7E85224EE67BA00024239 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +159,7 @@
 				B5E7E88124EE67BC00024239 /* XCMetricsUITests */,
 				B55B5F4A24EE986E0020182F /* XCMetricsTestPlan */,
 				B5E7E85C24EE67BA00024239 /* Products */,
+				B593475424F50D4D0018E1A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,7 +203,10 @@
 				B5E7E87724EE67BC00024239 /* XCMetricsTests.swift */,
 				B5E7E90F24EE74D100024239 /* XCSignpostMetricsTests.swift */,
 				B5E7E91524EE761E00024239 /* XCAsyncPerformanceTests.swift */,
-				B56D640E24EFCE2D005437D5 /* OSSignpostMetric.swift */,
+				B56D640E24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift */,
+				B593475924F56A5C0018E1A3 /* XCSignpostHookTestCase.swift */,
+				B593475C24F56AD60018E1A3 /* Signpost.swift */,
+				B593475F24F56AFF0018E1A3 /* Measurements.swift */,
 				B5E7E91124EE755200024239 /* MonotonicClockMetric.swift */,
 				B5E7E87924EE67BC00024239 /* Info.plist */,
 			);
@@ -188,6 +216,8 @@
 		B5E7E88124EE67BC00024239 /* XCMetricsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B593476224F56BC80018E1A3 /* XCAppLaunchHookedTestCase.swift */,
+				B593475724F5683E0018E1A3 /* XCTApplicationLaunchMetric+Hooked.swift */,
 				B5E7E91724EE770500024239 /* XCAppLaunchMetricsUITests.swift */,
 				B5E7E88224EE67BC00024239 /* XCMetricsUITests.swift */,
 				B5E7E91C24EE795000024239 /* XCSignpostScrollMetricsUITests.swift */,
@@ -241,6 +271,9 @@
 				B5E7E87524EE67BB00024239 /* PBXTargetDependency */,
 			);
 			name = XCMetricsTests;
+			packageProductDependencies = (
+				B593475524F50D4D0018E1A3 /* InterposeKit */,
+			);
 			productName = XCMetricsTests;
 			productReference = B5E7E87324EE67BB00024239 /* XCMetricsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -259,6 +292,9 @@
 				B5E7E88024EE67BC00024239 /* PBXTargetDependency */,
 			);
 			name = XCMetricsUITests;
+			packageProductDependencies = (
+				B593475224F5098F0018E1A3 /* InterposeKit */,
+			);
 			productName = XCMetricsUITests;
 			productReference = B5E7E87E24EE67BC00024239 /* XCMetricsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -294,6 +330,9 @@
 				Base,
 			);
 			mainGroup = B5E7E85224EE67BA00024239;
+			packageReferences = (
+				B593475124F5098F0018E1A3 /* XCRemoteSwiftPackageReference "InterposeKit" */,
+			);
 			productRefGroup = B5E7E85C24EE67BA00024239 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,11 +397,14 @@
 			files = (
 				B5E7E91624EE761E00024239 /* XCAsyncPerformanceTests.swift in Sources */,
 				B5E7E87824EE67BC00024239 /* XCMetricsTests.swift in Sources */,
+				B593475A24F56A5C0018E1A3 /* XCSignpostHookTestCase.swift in Sources */,
 				B5E7E91224EE755200024239 /* MonotonicClockMetric.swift in Sources */,
 				B5E7E90C24EE736000024239 /* XCPerformanceMetricsTests.swift in Sources */,
 				B5E7E90E24EE73B200024239 /* XCTPerformanceMetric+All.swift in Sources */,
+				B593476024F56AFF0018E1A3 /* Measurements.swift in Sources */,
+				B593475D24F56AD60018E1A3 /* Signpost.swift in Sources */,
 				B5E7E91424EE758700024239 /* AtomicArray.swift in Sources */,
-				B56D640F24EFCE2D005437D5 /* OSSignpostMetric.swift in Sources */,
+				B56D640F24EFCE2D005437D5 /* XCTOSSignpostMetric+Hooked.swift in Sources */,
 				B5E7E91024EE74D100024239 /* XCSignpostMetricsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,10 +416,15 @@
 				B5E7E91D24EE795000024239 /* XCSignpostScrollMetricsUITests.swift in Sources */,
 				B5E7E91924EE78F500024239 /* SignpostName.swift in Sources */,
 				B5E7E88324EE67BC00024239 /* XCMetricsUITests.swift in Sources */,
+				B593475E24F56AD60018E1A3 /* Signpost.swift in Sources */,
 				B5E7E91F24EE79CB00024239 /* XCSignpostTransitionMetricsUITests.swift in Sources */,
+				B593475B24F56A5C0018E1A3 /* XCSignpostHookTestCase.swift in Sources */,
+				B593475824F5683E0018E1A3 /* XCTApplicationLaunchMetric+Hooked.swift in Sources */,
 				B5E7E91A24EE78F800024239 /* Log.swift in Sources */,
+				B593476324F56BC80018E1A3 /* XCAppLaunchHookedTestCase.swift in Sources */,
 				B5E7E91B24EE78FB00024239 /* String+Init.swift in Sources */,
-				B56D641024EFD403005437D5 /* OSSignpostMetric.swift in Sources */,
+				B56D641024EFD403005437D5 /* XCTOSSignpostMetric+Hooked.swift in Sources */,
+				B593476124F56AFF0018E1A3 /* Measurements.swift in Sources */,
 				B5E7E91824EE770500024239 /* XCAppLaunchMetricsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +745,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B593475124F5098F0018E1A3 /* XCRemoteSwiftPackageReference "InterposeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/steipete/InterposeKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B593475224F5098F0018E1A3 /* InterposeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B593475124F5098F0018E1A3 /* XCRemoteSwiftPackageReference "InterposeKit" */;
+			productName = InterposeKit;
+		};
+		B593475524F50D4D0018E1A3 /* InterposeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B593475124F5098F0018E1A3 /* XCRemoteSwiftPackageReference "InterposeKit" */;
+			productName = InterposeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B5E7E85324EE67BA00024239 /* Project object */;
 }

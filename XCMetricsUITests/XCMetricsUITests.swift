@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class XCMetricsUITests: XCTestCase {
+final class XCMetricsUITests: XCSignpostHookedTestCase {
     
     typealias MetricAlloc = @convention(c) (XCTMetric.Type, Selector) -> NSObject
     typealias MetricInitWithProcessName = @convention(c) (NSObject, Selector, String) -> XCTMetric
@@ -64,8 +64,8 @@ final class XCMetricsUITests: XCTestCase {
         return initMethod(result, initSelector, processName)
     }
     
-    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
-        return OSSignpostMetric(subsystem: processImageLog.subsystem, category: processImageLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
+        return XCTOSSignpostMetric(subsystem: processImageLog.subsystem, category: processImageLog.category, name: String(name))
     }
 }
 

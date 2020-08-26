@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class XCSignpostTransitionMetricsUITests: XCTestCase {
+final class XCSignpostTransitionMetricsUITests: XCSignpostHookedTestCase {
     
     override func setUpWithError() throws {
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -23,7 +23,7 @@ final class XCSignpostTransitionMetricsUITests: XCTestCase {
         
         let metrics: [XCTMetric]
         if #available(iOS 14, *) {
-            metrics = [signpostMetric, OSSignpostMetric.navigationTransitionMetric]
+            metrics = [signpostMetric, XCTOSSignpostMetric.navigationTransitionMetric]
         } else {
             metrics = [signpostMetric]
         }
@@ -42,7 +42,7 @@ final class XCSignpostTransitionMetricsUITests: XCTestCase {
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
-        return OSSignpostMetric(subsystem: navTransitionLog.subsystem, category: navTransitionLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
+        return XCTOSSignpostMetric(subsystem: navTransitionLog.subsystem, category: navTransitionLog.category, name: String(name))
     }
 }

@@ -8,7 +8,7 @@
 import XCTest
 @testable import XCMetrics
 
-final class XCAsyncPerformanceTests: XCTestCase {
+final class XCAsyncPerformanceTests: XCSignpostHookedTestCase {
     
     func testPerformanceAsyncTask() {
         let signpostMetric = self.signpostMetric(for: SignpostName.asyncTask)
@@ -52,7 +52,7 @@ final class XCAsyncPerformanceTests: XCTestCase {
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
-        return OSSignpostMetric(subsystem: asyncTaskLog.subsystem, category: asyncTaskLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
+        return XCTOSSignpostMetric(subsystem: asyncTaskLog.subsystem, category: asyncTaskLog.category, name: String(name))
     }
 }

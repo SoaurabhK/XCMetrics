@@ -10,7 +10,7 @@ import XCTest
 
 ///Permuation Defination: The number of ways to choose a sample of r elements from a set of n distinct objects where order does matter and replacements are not allowed.  When n = r this reduces to n!, a simple factorial of n.
 /// nPr = fact(n) / fact(n - r)
-final class XCSignpostMetricsTests: XCTestCase {
+final class XCSignpostMetricsTests: XCSignpostHookedTestCase {
     let source: [Int] = [1, 2, 3, 4, 5, 6, 7] // 7! = 5040 unique arrays.
     
     // Self.defaultMeasureOptions will be used
@@ -50,8 +50,8 @@ final class XCSignpostMetricsTests: XCTestCase {
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
-        return OSSignpostMetric(subsystem: permutationLog.subsystem, category: permutationLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
+        return XCTOSSignpostMetric(subsystem: permutationLog.subsystem, category: permutationLog.category, name: String(name))
     }
 }
 

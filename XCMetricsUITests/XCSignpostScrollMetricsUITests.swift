@@ -6,8 +6,9 @@
 //
 
 import XCTest
+import InterposeKit
 
-final class XCSignpostScrollMetricsUITests: XCTestCase {
+final class XCSignpostScrollMetricsUITests: XCSignpostHookedTestCase {
 
     override func setUpWithError() throws {
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -25,7 +26,7 @@ final class XCSignpostScrollMetricsUITests: XCTestCase {
         
         let metrics: [XCTMetric]
         if #available(iOS 14, *) {
-            metrics = [signpostMetric, OSSignpostMetric.scrollDecelerationMetric]
+            metrics = [signpostMetric, XCTOSSignpostMetric.scrollDecelerationMetric]
         } else {
             metrics = [signpostMetric]
         }
@@ -48,7 +49,7 @@ final class XCSignpostScrollMetricsUITests: XCTestCase {
         
         let metrics: [XCTMetric]
         if #available(iOS 14, *) {
-            metrics = [signpostMetric, OSSignpostMetric.scrollDraggingMetric]
+            metrics = [signpostMetric, XCTOSSignpostMetric.scrollDraggingMetric]
         } else {
             metrics = [signpostMetric]
         }
@@ -66,7 +67,7 @@ final class XCSignpostScrollMetricsUITests: XCTestCase {
         return measureOptions
     }
     
-    private func signpostMetric(for name: StaticString) -> OSSignpostMetric {
-        return OSSignpostMetric(subsystem: scrollLog.subsystem, category: scrollLog.category, name: String(name))
+    private func signpostMetric(for name: StaticString) -> XCTOSSignpostMetric {
+        return XCTOSSignpostMetric(subsystem: scrollLog.subsystem, category: scrollLog.category, name: String(name))
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import InterposeKit
 
 final class XCAppLaunchMetricsUITests: XCAppLaunchHookedTestCase {
 

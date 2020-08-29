@@ -8,8 +8,9 @@
 import XCTest
 import InterposeKit
 
-class XCAppLaunchHookedTestCase: XCTestCase {
+class XCAppLaunchHookedTestCase: MXMInstrumentHookedTestCase {
     private static var appLaunchHook: Interpose?
+    
     class override func setUp() {
         super.setUp()
         appLaunchHook = XCTApplicationLaunchMetric.appLaunchHook

@@ -8,8 +8,9 @@
 import XCTest
 import InterposeKit
 
-class XCSignpostHookedTestCase: XCTestCase {
+class XCSignpostHookedTestCase: MXMInstrumentHookedTestCase {
     private static var signpostHook: Interpose?
+    
     class override func setUp() {
         super.setUp()
         signpostHook = XCTOSSignpostMetric.signpostHook

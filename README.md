@@ -58,3 +58,5 @@ https://indiestack.com/2018/02/xcodes-secret-performance-tests<br/>
 https://developer.apple.com/videos/play/wwdc2018/405<br/>
 https://developer.apple.com/videos/play/wwdc2019/417<br/>
 https://developer.apple.com/videos/play/wwdc2020/10077
+#
+Building an end to end performance tests CI pipeline? Give [XCTool](https://github.com/SoaurabhK/XCTool) a try!

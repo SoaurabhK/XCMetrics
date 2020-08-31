@@ -43,6 +43,7 @@ XCMetrics welcomes contributions in the form of GitHub issues and pull-requests:
 1.  For PRs, please add the purpose and summary of your changes in the PR description.<br/>
 2.  For issues, please add the steps to reproduce and tools/OS version.<br/>
 3.  Make sure you test your contributions.<br/>
+4.  [Ideas and suggestions](https://twitter.com/soaurabh) are very welcome!
 
 By submitting a pull request, you represent that you have the right to license your contribution to Soaurabh Kakkar and the community, and agree by submitting the patch that your contributions are licensed under the XCMetrics project license.
 

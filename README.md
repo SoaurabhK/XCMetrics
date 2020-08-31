@@ -6,6 +6,15 @@ XCMetrics: Measure performance metrics using XCTest
 ##  Identifying Performance Bottlenecks & Regressions
 Performance tests helps in identifying the impact of your code in terms of various metrics like CPU, Clock, Memory, Storage, Signpost, AppLaunch and more. Capturing performance metrics in your CI pipeline helps in identifying performance bottlenecks and regressions produced by your code over-time. If your performance metrics are going off, then Instruments can help in analysing the root cause.
 
+## Purpose
+Performance testing using XCTMetric confirming types have some rough edges i.e. bugs/peculiarities. This project aims to fix all those bugs in the performance APIs using Swizzling, making a consistent experience on both iOS 13 & 14. Here's the list of open issues and radars:
+1. [Default Launch Performance Test Crashes Occasionally](http://openradar.appspot.com/radar?id=4976981179367424) 
+2. [Getting error measuring signpost metrics in XCUITests](https://developer.apple.com/forums/thread/130576)
+3. [XCTests crash randomly in parallel testing](https://developer.apple.com/forums/thread/125536)
+4. [XCTOSSignpostMetric doesn’t detect signposts logged by static library](https://developer.apple.com/forums/thread/127458)
+5. [Lost connection to test manager service](https://openradar.appspot.com/24224991)
+6. [Lastly, Lack of performance tests documentation](https://developer.apple.com/forums/thread/132060)
+
 ## What's Inside
 Detailed examples of performance testing covering the usage of following metrics:<br/>
 1.  ```XCTCPUMetric``` to record information about CPU activity during a performance test.

@@ -4,7 +4,7 @@ XCMetrics: Measure performance metrics using XCTest
 ```XCMetrics``` is a reference implementation to accurately measure performance metrics of your code using Unit and UI tests. It provides detailed examples covering both old( i.e. XCTPerformanceMetric) & the new(i.e. XCTMetric) performance-testing system. It also fixes bugs/peculiarities in the XCTest performance APIs with runtime hooks(i.e. Monkey Patching), making it more stable & consistent.
 
 ## Purpose
-Performance testing using XCTMetric confirming types have some rough edges i.e. bugs/peculiarities. This project aims to fix all those bugs in the performance APIs using Swizzling, making a consistent experience on both iOS 13 & 14. Here's the list of open issues and radars:
+Performance testing using XCTest framework(i.e. XCTMetric confirming types) have some rough edges i.e. bugs/peculiarities. This project aims to fix all those bugs in the performance APIs using Swizzling, making a consistent experience on both iOS 13 & 14. Here's the list of open issues and radars:
 1. [Default Launch Performance Test Crashes Occasionally](http://openradar.appspot.com/radar?id=4976981179367424) 
 2. [Getting error measuring signpost metrics in XCUITests](https://developer.apple.com/forums/thread/130576)
 3. [XCTests crash randomly in parallel testing](https://developer.apple.com/forums/thread/125536)

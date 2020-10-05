@@ -23,11 +23,11 @@ final class MonotonicClockMetric: NSObject, XCTMetric {
             timeDiffNS = endTimeNano - startTimeNano
         } else if let startTimeNS = startTimes.first, let endTimeNS = endTimes.first, endTimeNS > startTimeNS {
             timeDiffNS = endTimeNS - startTimeNS
-            startTimes.removeFirst()
-            endTimes.removeFirst()
         } else {
             timeDiffNS = .min // or throw exception here.
         }
+        startTimes.removeFirst()
+        endTimes.removeFirst()
         
         let measurement = Measurement(value: Double(timeDiffNS), unit: Unit(symbol: "ns"))
         return [XCTPerformanceMeasurement(identifier: "com.sk.XCTPerformanceMetric_MonotonicClockTime", displayName: "Monotonic Clock Time", value: measurement)]
